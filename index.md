@@ -1,7 +1,14 @@
+---
+layout: default
+title: Home
+---
+
 # Recent Publications
 
-  - [<font color="green"> Conference </font>](#Conference)
-  - [<font color="green"> Journals </font>](#Journals)
+- [Recent Publications](#recent-publications)
+  - [Conference](#conference)
+  - [](#)
+  - [Journals](#journals)
 
 ---
 
