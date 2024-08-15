@@ -6,7 +6,7 @@
   - [Journals](#journals)
 ---
 
-<div id="conference">
+
   
 # Conference
 
@@ -230,7 +230,6 @@ https://doi.org/10.48550/arXiv.2407.16541)
   [<font color=Brown>Collision-Detection based Rate-Adaptation for Video Multicasting over IEEE 802.11 Wireless Networks</font>](https://ieeexplore.ieee.org/document/5652665)
   **ICIP 2010**
 
-</div>
 ---
 
 
