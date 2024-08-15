@@ -11,8 +11,6 @@ title: Home
 
 ---
 
-<div id="Conference">
-
 # Conference
 
 - *Lianchen Jia, Chao Zhou, Tianchi Huang, Chaoyang Li, Lifeng Sun*
@@ -238,7 +236,6 @@ https://doi.org/10.48550/arXiv.2407.16541)
 </div>
 ---
 
-<div id="Journals">
 
 # Journals
 
