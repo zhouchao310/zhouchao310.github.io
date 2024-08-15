@@ -234,11 +234,12 @@ https://doi.org/10.48550/arXiv.2407.16541)
   [<font color=Brown>Collision-Detection based Rate-Adaptation for Video Multicasting over IEEE 802.11 Wireless Networks</font>](https://ieeexplore.ieee.org/document/5652665)
   **ICIP 2010**
 
-</div>
 ---
 
 
-# Journals
+<div id="Conference">
+
+## Journals
 
 - *Tianchi Huang, Chao Zhou, Rui-Xiao Zhang, Chenglei Wu, Lifeng Sun*
 [<font color=Brown>Learning Tailored Adaptive Bitrate Algorithms to Heterogeneous Network Conditions: A Domain-Specific Priors and Meta-Reinforcement Learning Approach</font>](https://ieeexplore.ieee.org/document/9796516/)
@@ -300,4 +301,3 @@ https://doi.org/10.48550/arXiv.2407.16541)
   [<font color=Brown>An Optimization Scheme for Multi-user Video Transmission Over MIMO Multi-hop Wireless Networks</font>](http://www.jos.org.cn/ch/reader/download_pdf_file.aspx?journal_id=jos&file_name=88D0BB702E5C1707DA216DE97314F1CF19E0198366EB5D13C658FC41E0787D1CCB2329428D4C03AB&open_type=self&file_no=4201)
   **Journal of Software 2013**
 
-</div>
