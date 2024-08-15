@@ -12,7 +12,7 @@ title: Home
 
 <div id="Conference">
   
-## Conference
+# Conference
 
 - *Lianchen Jia, Chao Zhou, Tianchi Huang, Chaoyang Li, Lifeng Sun*
   [<font color=Brown>Dancing with Shackles, Meet the Challenge of Industrial Adaptive Streaming via Offline Reinforcement Learning</font>](https://infocom2024.ieee-infocom.org/program/accepted-paper-list-main-conference)
@@ -240,7 +240,7 @@ https://doi.org/10.48550/arXiv.2407.16541)
 
 <div id="Conference">
 
-## Journals
+# Journals
 
 - *Tianchi Huang, Chao Zhou, Rui-Xiao Zhang, Chenglei Wu, Lifeng Sun*
 [<font color=Brown>Learning Tailored Adaptive Bitrate Algorithms to Heterogeneous Network Conditions: A Domain-Specific Priors and Meta-Reinforcement Learning Approach</font>](https://ieeexplore.ieee.org/document/9796516/)
