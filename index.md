@@ -10,7 +10,7 @@ title: Home
   - [Journals](#journals)
 ---
 
-<div id="Conference">
+<div id="conference">
   
 # Conference
 
@@ -238,7 +238,7 @@ https://doi.org/10.48550/arXiv.2407.16541)
 ---
 
 
-<div id="Conference">
+<div id="journals">
 
 # Journals
 
