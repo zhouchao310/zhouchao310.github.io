@@ -7,7 +7,6 @@ title: Home
 
 - [Recent Publications](#recent-publications)
   - [Conference](#conference)
-  - [](#)
   - [Journals](#journals)
 
 ---
