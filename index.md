@@ -4,11 +4,10 @@
 - [Recent Publications](#recent-publications)
   - [Conference](#conference)
   - [Journals](#journals)
+    
 ---
 
-
-  
-# Conference
+## Conference
 
 - *Lianchen Jia, Chao Zhou, Tianchi Huang, Chaoyang Li, Lifeng Sun*
   [<font color=Brown>Dancing with Shackles, Meet the Challenge of Industrial Adaptive Streaming via Offline Reinforcement Learning</font>](https://infocom2024.ieee-infocom.org/program/accepted-paper-list-main-conference)
