@@ -1,0 +1,248 @@
+/* 基本样式 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Lighter background for a cleaner look */
+    color: #343a40;
+}
+
+.container {
+    display: flex;
+    margin: 0;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: 300px;
+    background-color: #343a40; /* Darker sidebar */
+    color: #e9ecef;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.sidebar .fas, .sidebar .fab, .sidebar .ai {
+    margin-right: 10px; /* Space between icon and text in sidebar */
+    width: 20px; /* Fixed width for alignment */
+    text-align: center;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.profile-img {
+    width: 160px; /* Slightly larger profile image */
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #495057;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile h1 {
+    font-size: 2em; /* Larger name */
+    margin-bottom: 8px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.profile p {
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    color: #adb5bd;
+}
+
+.profile p a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.profile p a:hover {
+    color: #fff;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation ul li {
+    margin-bottom: 12px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #ced4da;
+    font-size: 1.1em;
+    display: flex; /* Align icon and text */
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation ul li a:hover, .navigation ul li a.active {
+    background-color: #495057;
+    color: #fff;
+}
+
+/* 主要内容区域样式 */
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    margin-left: 300px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.05); /* Subtle shadow on the left edge of content */
+    min-height: 100vh; 
+    box-sizing: border-box;
+}
+
+.content-section {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef; /* Separator for sections */
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
+
+.content h2 {
+    font-size: 2.2em; /* Larger section titles */
+    color: #2c3e50; /* Darker, more professional title color */
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: none; /* Removed default border, using section border now */
+}
+
+.content h2 .fas, .content h2 .fab, .content h2 .ai {
+    margin-right: 15px;
+    color: #007bff; /* Accent color for icons in titles */
+}
+
+.content p {
+    font-size: 1.05em;
+    color: #555e68;
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+.content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* Card styling for publications and projects */
+.card-section .card {
+    background-color: #f8f9fa; /* Light background for cards */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.card-section .card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card p strong {
+    color: #343a40;
+    font-size: 1.15em;
+}
+
+.card em {
+    color: #6c757d;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Item dividers for teaching and awards */
+.item-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 25px 0;
+}
+
+.award-icon {
+    color: #ffc107; /* Gold color for award stars */
+    margin-right: 8px;
+}
+
+/* Social icons in contact section */
+.social-icon {
+    font-size: 1.1em;
+    margin-right: 15px;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.social-icon .fab, .social-icon .ai {
+    margin-right: 5px;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #343a40;
+    color: #adb5bd;
+    font-size: 0.9em;
+    margin-left: 300px;
+    box-sizing: border-box;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        z-index: auto;
+        box-shadow: none;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 25px;
+        box-shadow: none;
+    }
+
+    .content h2 {
+        font-size: 1.8em;
+    }
+
+    footer {
+        margin-left: 0;
+    }
+}
+
