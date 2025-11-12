@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- 粒子背景容器 -->
+    <div class="particles-container" id="particlesContainer"></div>
+    
     <!-- 滚动进度指示器 -->
     <div class="scroll-indicator">
         <div class="scroll-progress" id="scrollProgress"></div>
@@ -45,7 +48,7 @@
                 <h2><i class="fas fa-user"></i> About Me</h2>
                 <p>Welcome! </p>
                 <p>I joined <a href = "https://www.kuaishou.com/?isHome=1"> Kuaishou </a> in Feb. 2017, and currently I lead the video algorithm center there. I received my PhD in Computer Science from <a href = "https://www.pku.edu.cn/">Peking University</a> in 2014, where I was fortunate to be advised by <a href = "https://www.icst.pku.edu.cn/xztd/xztd_01/1222623.htm">Zongming Guo</a>. I have  visited <a href = "https://www.nthu.edu.tw/"> National Tsing Hua University </a> in 2023, where I was advised by <a href = "https://www.ee.nthu.edu.tw/cwlin/">Chia-wen Lin </a>. My research interests include network optimization, video streaming, video encoding & processing, and video quality assessment. To date, I have published over 50 papers and hold more than 100 granted patents.</p>
-                <p><strong><font color=Brown> Short Bio: </font></strong> <br>
+                <p><strong><font color="#00d4ff"> Short Bio: </font></strong> <br>
                 I hold a Ph.D. from Peking University (2014) and began my career as a Senior Engineer at Huawei’s 2012 Lab, where I pioneered adaptive streaming technologies such as DASH and HLS. From 2015 to 2017, I served as a Research Scientist at two technology startups, focusing on the advancement of architectures and optimizations for real-time communication (RTC) and live streaming systems. Since joining Kuaishou in 2017, I have led large-scale video experience optimization initiatives through research and implementation in areas including network optimization, adaptive streaming systems, video encoding and processing, as well as video quality assessment. Currently, I am leading the video algorithm center at Kuaishou.</p>
             </section>
 <!--
@@ -63,102 +66,102 @@
             <section id="publications" class="content-section card-section">
                 <h2><i class="fas fa-book-open"></i> Recent Publications</h2>
                 
-                <i class="fas fa-calendar-days"></i> <strong> <font color=Brown> 2025 </font></strong>
+                <i class="fas fa-calendar-days"></i> <strong> <font color="#00d4ff"> 2025 </font></strong>
                 <div class="publication-item card">
                     <a href="#" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Towards User-level QoE: Large-scale Practice in Personalized Optimization of Adaptive Video Streaming </font> </a> <br>
+                    <font color="#00d4ff"> Towards User-level QoE: Large-scale Practice in Personalized Optimization of Adaptive Video Streaming </font> </a> <br>
                     <em>Lianchen Jia, Chao Zhou, Chaoyang Li, Jiangchuan Liu, Lifeng Sun </em>
                     <strong>SIGCOMM, 2025</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://arxiv.org/pdf/2503.10259" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> KVQ: Boosting Video Quality Assessment via Saliency-guided Local Perception </font> </a> <br>
+                    <font color="#00d4ff"> KVQ: Boosting Video Quality Assessment via Saliency-guided Local Perception </font> </a> <br>
                     <em>Yunpeng Qu, Kun Yuan, Qizhi Xie, Ming Sun, Chao Zhou, Jian Wang </em>
                     <strong>CVPR, 2025</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="#" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Accelerating Diffusion-based Super-Resolution with Dynamic Time-Spatial Sampling </font> </a> <br>
+                    <font color="#00d4ff"> Accelerating Diffusion-based Super-Resolution with Dynamic Time-Spatial Sampling </font> </a> <br>
                     <em>Rui Qin, Qijie Wang, Ming Sun, Haowei Zhu, Chao Zhou, Bin Wang </em>
                     <strong>IJCAI, 2025</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="#" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Visual Autoregressive Modeling for Image Super-Resolution </font> </a> <br>
+                    <font color="#00d4ff"> Visual Autoregressive Modeling for Image Super-Resolution </font> </a> <br>
                     <em>Yunpeng Qu, Kun Yuan, Jinhua Hao, Kai Zhao, Qizhi Xie, Ming Sun , Chao Zhou </em>
                     <strong>ICML, 2025</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="#" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Ultra Lowrate Image Compression with Semantic Residual Coding and Compression-aware Diffusion </font> </a> <br>
+                    <font color="#00d4ff">Ultra Lowrate Image Compression with Semantic Residual Coding and Compression-aware Diffusion </font> </a> <br>
                     <em>Anle Ke, Xu Zhang, Tong Chen, Ming Lu, Chao Zhou, Jiawen Gu, Zhan Ma </em>
                     <strong>ICML, 2025</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="#" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Content-Aware Motion Compensated Temporal Filter for Video Coding </font> </a> <br>
+                    <font color="#00d4ff"> Content-Aware Motion Compensated Temporal Filter for Video Coding </font> </a> <br>
                     <em>Yunrui Jian, Yi Xue, Yue Huang, Meng Lei, Weilun Feng, Zhenan Lin†, Chao Zhou </em>
                     <strong>DCC, 2025</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="#" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Deep Adaptive Quantization for Practical Video Compression </font> </a> <br>
+                    <font color="#00d4ff"> Deep Adaptive Quantization for Practical Video Compression </font> </a> <br>
                     <em>Shuai Huo, Hewei Liu, Jiawen Gu, Dengchao Jin, Meng Lei, Bo Huang, Chao Zhou </em>
                     <strong>DCC, 2025</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://arxiv.org/abs/2412.13508" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Plug-and-Play Tri-Branch Invertible Block for Image Rescaling </font> </a> <br>
+                    <font color="#00d4ff"> Plug-and-Play Tri-Branch Invertible Block for Image Rescaling </font> </a> <br>
                     <em>Jingwei Bao, Jinhua Hao, Pengcheng Xu, Ming Sun, Chao Zhou, Shuyuan Zhu </em>
                     <strong>AAAI, 2025</strong>
                 </div>
 
 
-                <i class="fas fa-calendar-days"></i> <strong> <font color=Brown> 2024 </font></strong>
+                <i class="fas fa-calendar-days"></i> <strong> <font color="#00d4ff"> 2024 </font></strong>
                 <div class="publication-item card">
                     <a href="https://dl.acm.org/doi/pdf/10.1145/3589334.3645338" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Meet challenges of RTT Jitter, A Hybrid Internet Congestion Control Algorithm </font> </a> <br>
+                    <font color="#00d4ff"> Meet challenges of RTT Jitter, A Hybrid Internet Congestion Control Algorithm </font> </a> <br>
                     <em>Lianchen Jia, Chao Zhou, Tianchi Huang, Chaoyang Li, Lifeng Sun </em>
                     <strong>WWW, 2024</strong>
                 </div>
 
                 <div class="publication-item card">
-                    <a href="https://ieeexplore.ieee.org/document/10621126" target="_blank"> <i class="fas fa-file-alt"></i>  </a>  <font color=Brown> Dancing with Shackles, Meet the Challenge of Industrial Adaptive Streaming via Offline Reinforcement Learning </font> <br>
+                    <a href="https://ieeexplore.ieee.org/document/10621126" target="_blank"> <i class="fas fa-file-alt"></i>  </a>  <font color="#00d4ff"> Dancing with Shackles, Meet the Challenge of Industrial Adaptive Streaming via Offline Reinforcement Learning </font> <br>
                     <em>Lianchen Jia, Chao Zhou, Tianchi Huang, Chaoyang Li, Lifeng Sun </em>
                         <strong>INFOCOM，2024</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://dl.acm.org/doi/pdf/10.1145/3664647.3680721" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> QPT-V2: Masked Image Modeling Advances Visual Scoring </font> </a> <br>
+                    <font color="#00d4ff"> QPT-V2: Masked Image Modeling Advances Visual Scoring </font> </a> <br>
                     <em>Qizhi Xie, Kun Yuan, Yunpeng Qu, Mingda Wu, Ming Sun, Chao Zhou, Jihong Zhu </em>
                     <strong>MM, 2024</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://link.springer.com/chapter/10.1007/978-3-031-72670-5_3" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> OAPT: Offset-Aware Partition Transformer for Double JPEG Artifacts Removal </font> </a> <br>
+                    <font color="#00d4ff"> OAPT: Offset-Aware Partition Transformer for Double JPEG Artifacts Removal </font> </a> <br>
                     <em>Qiao Mo, Yukang Ding, Jinhua Hao, Qiang Zhu, Ming Sun, Chao Zhou, Feiyu Chen, Shuyuan Zhu </em>
                     <strong>ECCV, 2024</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://link.springer.com/chapter/10.1007/978-3-031-73390-1_4" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> A New Dataset and Framework for Real-World Blurred Images Super-Resolution </font> </a> <br>
+                    <font color="#00d4ff"> A New Dataset and Framework for Real-World Blurred Images Super-Resolution </font> </a> <br>
                     <em>Rui Qin, Ming Sun, Chao Zhou, Bin Wang </em>
                     <strong>ECCV, 2024</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://link.springer.com/chapter/10.1007/978-3-031-73247-8_17" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Xpsr: Cross-modal priors for diffusion-based image super-resolution </font> </a> <br>
+                    <font color="#00d4ff"> Xpsr: Cross-modal priors for diffusion-based image super-resolution </font> </a> <br>
                     <em>Yunpeng Qu, Kun Yuan, Kai Zhao, Qizhi Xie, Jinhua Hao, Ming Sun, Chao Zhou </em>
                     <strong>ECCV, 2024</strong>
                 </div>
@@ -166,79 +169,79 @@
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/10533791" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Asymmetric Motion Vector Refinement for Future Video Coding </font> </a> <br>
+                    <font color="#00d4ff"> Asymmetric Motion Vector Refinement for Future Video Coding </font> </a> <br>
                     <em>Shuai Huo, Hewei Liu, Jiawen Gu, Dengchao Jin, Meng Lei, Bo Huang, Chao Zhou </em>
                     <strong>DCC, 2024</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_KVQ_Kwai_Video_Quality_Assessment_for_Short-form_Videos_CVPR_2024_paper.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> KVQ: Kaleidoscope video quality assessment for short-form videos </font> </a> <br>
+                    <font color="#00d4ff"> KVQ: Kaleidoscope video quality assessment for short-form videos </font> </a> <br>
                     <em>Yiting Lu, Xin Li, Yajing Pei, Kun Yuan, Qizhi Xie, Yunpeng Qu, Ming Sun, Chao Zhou, Zhibo Chen </em>
                     <strong>CVPR, 2024</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Yuan_PTM-VQA_Efficient_Video_Quality_Assessment_Leveraging_Diverse_PreTrained_Models_from_CVPR_2024_paper.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> PTM-VQA: efficient video quality assessment leveraging diverse pretrained models from the wild </font> </a> <br>
+                    <font color="#00d4ff"> PTM-VQA: efficient video quality assessment leveraging diverse pretrained models from the wild </font> </a> <br>
                     <em>Kun Yuan, Hongbo Liu, Mading Li, Muyi Sun, Ming Sun, Jiachao Gong, Jinhua Hao, Chao Zhou, Yansong Tang </em>
                     <strong>CVPR, 2024</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zhu_CPGA_Coding_Priors-Guided_Aggregation_Network_for_Compressed_Video_Quality_Enhancement_CVPR_2024_paper.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> CPGA: Coding priors-guided aggregation network for compressed video quality enhancement </font> </a> <br>
+                    <font color="#00d4ff"> CPGA: Coding priors-guided aggregation network for compressed video quality enhancement </font> </a> <br>
                     <em>Qiang Zhu, Jinhua Hao, Yukang Ding, Yu Liu, Qiao Mo, Ming Sun, Chao Zhou, Shuyuan Zhu </em>
                     <strong>CVPR, 2024</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="#" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Deep Adaptive Quantization for Practical Video Compression </font> </a> <br>
+                    <font color="#00d4ff"> Deep Adaptive Quantization for Practical Video Compression </font> </a> <br>
                     <em>Shuai Huo, Hewei Liu, Jiawen Gu, Dengchao Jin, Meng Lei, Bo Huang, Chao Zhou </em>
                         <strong>DCC, 2025</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="#" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Deep Adaptive Quantization for Practical Video Compression </font> </a> <br>
+                    <font color="#00d4ff"> Deep Adaptive Quantization for Practical Video Compression </font> </a> <br>
                     <em>Shuai Huo, Hewei Liu, Jiawen Gu, Dengchao Jin, Meng Lei, Bo Huang, Chao Zhou </em>
                         <strong>DCC, 2025</strong>
                 </div>
 
-                <i class="fas fa-calendar-days"></i> <strong> <font color=Brown> 2023 </font></strong>
+                <i class="fas fa-calendar-days"></i> <strong> <font color="#00d4ff"> 2023 </font></strong>
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/10229002" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Buffer awareness neural adaptive video streaming for avoiding extra buffer consumption </font> </a> <br>
+                    <font color="#00d4ff"> Buffer awareness neural adaptive video streaming for avoiding extra buffer consumption </font> </a> <br>
                     <em>Tianchi Huang, Chao Zhou, Rui-Xiao Zhang, Chenglei Wu, Lifeng Sun </em>
                         <strong>INFOCOM, 2023</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/10228995" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Rdladder: Resolution-duration ladder for vbr-encoded videos via imitation learning </font> </a> <br>
+                    <font color="#00d4ff"> Rdladder: Resolution-duration ladder for vbr-encoded videos via imitation learning </font> </a> <br>
                     <em>Lianchen Jia, Chao Zhou, Tianchi Huang, Chaoyang Li, Lifeng Sun </em>
                     <strong>INFOCOM, 2023</strong>
                 </div>
 
-                <i class="fas fa-calendar-days"></i> <strong> <font color=Brown> 2022 </font></strong>
+                <i class="fas fa-calendar-days"></i> <strong> <font color="#00d4ff"> 2022 </font></strong>
                 <div class="publication-item card">
                     <a href="https://dl.acm.org/doi/pdf/10.1145/3503161.3548436" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Learned internet congestion control for short video uploading </font> </a> <br>
+                    <font color="#00d4ff"> Learned internet congestion control for short video uploading </font> </a> <br>
                     <em>Tianchi Huang, Chao Zhou, Lianchen Jia, Rui-Xiao Zhang, Lifeng Sun </em>
                     <strong>MM, 2022</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://dl.acm.org/doi/abs/10.1145/3503161.3551571" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> PDAS: Probability-driven adaptive streaming for short video </font> </a> <br>
+                    <font color="#00d4ff"> PDAS: Probability-driven adaptive streaming for short video </font> </a> <br>
                     <em>Chao Zhou, Yixuan Ban, Yangchao Zhao, Liang Guo, Bing Yu </em>
                     <strong>MM, 2022, <font color=Green>1st Prize</font></strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/9796516" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Learning tailored adaptive bitrate algorithms to heterogeneous network conditions: A domain-specific priors and meta-reinforcement learning approach </font> </a> <br>
+                    <font color="#00d4ff"> Learning tailored adaptive bitrate algorithms to heterogeneous network conditions: A domain-specific priors and meta-reinforcement learning approach </font> </a> <br>
                     <em>Tianchi Huang, Chao Zhou, Rui-Xiao Zhang, Chenglei Wu, Lifeng Sun </em>
                     <strong>JSAC, 2022</strong>
                 </div>
@@ -246,244 +249,244 @@
 
 
 
-                <i class="fas fa-calendar-days"></i> <strong> <font color=Brown> 2021 </font></strong>
+                <i class="fas fa-calendar-days"></i> <strong> <font color="#00d4ff"> 2021 </font></strong>
                 <div class="publication-item card">
                     <a href="https://dl.acm.org/doi/abs/10.1145/3474085.3479208" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Deadline and priority-aware congestion control for delay-sensitive multimedia streaming </font> </a> <br>
+                    <font color="#00d4ff"> Deadline and priority-aware congestion control for delay-sensitive multimedia streaming </font> </a> <br>
                     <em>Chao Zhou, Wenjun Wu, Dan Yang, Tianchi Huang, Liang Guo, Bing Yu </em>
                     <strong>MM, 2021, <font color=Green>1st Prize</font></strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/9334431" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Practically deploying heavyweight adaptive bitrate algorithms with teacher-student learning </font> </a> <br>
+                    <font color="#00d4ff"> Practically deploying heavyweight adaptive bitrate algorithms with teacher-student learning </font> </a> <br>
                     <em>Zili Meng, Yaning Guo, Yixin Shen, Jing Chen, Chao Zhou, Minhu Wang, Jia Zhang, Mingwei Xu, Chen Sun, Hongxin Hu </em>
                     <strong>TON, 2021</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/9312489" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Cratus: A lightweight and robust approach for mobile live streaming </font> </a> <br>
+                    <font color="#00d4ff"> Cratus: A lightweight and robust approach for mobile live streaming </font> </a> <br>
                     <em>Bo Wang, Mingwei Xu, Fengyuan Ren, Chao Zhou, Jianping Wu </em>
                     <strong>TMC, 2021</strong>
                 </div>
             
 
-                <i class="fas fa-calendar-days"></i> <strong> <font color=Brown> 2020 </font></strong>
+                <i class="fas fa-calendar-days"></i> <strong> <font color="#00d4ff"> 2020 </font></strong>
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/9155411" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Stick: A harmonious fusion of buffer-based and learning-based approach for adaptive streaming </font> </a> <br>
+                    <font color="#00d4ff"> Stick: A harmonious fusion of buffer-based and learning-based approach for adaptive streaming </font> </a> <br>
                     <em>Tianchi Huang, Chao Zhou, Rui-Xiao Zhang, Chenglei Wu, Xin Yao, Lifeng Sun </em>
                     <strong>INFOCOM, 2020</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/9109427" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Quality-aware neural adaptive video streaming with lifelong imitation learning </font> </a> <br>
+                    <font color="#00d4ff"> Quality-aware neural adaptive video streaming with lifelong imitation learning </font> </a> <br>
                     <em>Tianchi Huang, Chao Zhou, Xin Yao, Rui-Xiao Zhang, Chenglei Wu, Bing Yu, Lifeng Sun </em>
                     <strong>JSAC, 2020</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/9190683" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> High efficiency live video streaming with frame dropping </font> </a> <br>
+                    <font color="#00d4ff"> High efficiency live video streaming with frame dropping </font> </a> <br>
                     <em>Yunlong Li, Shanshe Wang, Xinfeng Zhang, Chao Zhou, Siwei Ma </em>
                     <strong>ICIP, 2020</strong>
                 </div>
 
-                <i class="fas fa-calendar-days"></i> <strong> <font color=Brown> 2010~2019 </font></strong>
+                <i class="fas fa-calendar-days"></i> <strong> <font color="#00d4ff"> 2010~2019 </font></strong>
                 <div class="publication-item card">
                     <a href="https://dl.acm.org/doi/abs/10.1145/3338533.3366606" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Generalizing rate control strategies for realtime video streaming via learning from deep learning </font> </a> <br>
+                    <font color="#00d4ff"> Generalizing rate control strategies for realtime video streaming via learning from deep learning </font> </a> <br>
                     <em>Tianchi Huang, Rui-Xiao Zhang, Chenglei Wu, Xin Yao, Chao Zhou, Bing Yu, Lifeng Sun</em>
                     <strong>MM in Asia, 2019</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://arxiv.org/pdf/1908.02270" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Comyco: Quality-aware adaptive video streaming via imitation learning </font> </a> <br>
+                    <font color="#00d4ff"> Comyco: Quality-aware adaptive video streaming via imitation learning </font> </a> <br>
                     <em>Tianchi Huang, Chao Zhou, Rui-Xiao Zhang, Chenglei Wu, Xin Yao, Lifeng Sun </em>
                     <strong>MM, 2019</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/8825559" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Improving the performance of online bitrate adaptation with multi-step prediction over cellular networks </font> </a> <br>
+                    <font color="#00d4ff"> Improving the performance of online bitrate adaptation with multi-step prediction over cellular networks </font> </a> <br>
                     <em>Bo Wang, Fengyuan Ren, Jiahai Yang, Chao Zhou </em>
                     <strong>TMC, 2019</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/8784800" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Hybrid control-based ABR: Towards low-delay live streaming </font> </a> <br>
+                    <font color="#00d4ff"> Hybrid control-based ABR: Towards low-delay live streaming </font> </a> <br>
                     <em>Bo Wang, Fengyuan Ren, Chao Zhou </em>
                     <strong>ICME, 2019</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/8698706" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> A statistical-based rate adaptation approach for short video service </font> </a> <br>
+                    <font color="#00d4ff"> A statistical-based rate adaptation approach for short video service </font> </a> <br>
                     <em>Chao Zhou, Shucheng Zhong, Yufeng Geng, Bing Yu </em>
                     <strong>VCIP, 2018</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://arxiv.org/pdf/1805.02482" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> QARC: Video quality aware rate control for real-time video streaming based on deep reinforcement learning </font> </a> <br>
+                    <font color="#00d4ff"> QARC: Video quality aware rate control for real-time video streaming based on deep reinforcement learning </font> </a> <br>
                     <em>Tianchi Huang, Rui-Xiao Zhang, Chao Zhou, Lifeng Sun </em>
                     <strong>MM, 2018</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://arxiv.org/pdf/1805.00619" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Delay-constrained rate control for real-time video streaming with bounded neural network </font> </a> <br>
+                    <font color="#00d4ff"> Delay-constrained rate control for real-time video streaming with bounded neural network </font> </a> <br>
                     <em>Tianchi Huang, Rui-Xiao Zhang, Chao Zhou, Lifeng Sun </em>
                     <strong>SIGMM workshop, 2018</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://arxiv.org/pdf/1704.08535" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> TFDASH: A fairness, stability, and efficiency aware rate control approach for multiple clients over DASH </font> </a> <br>
+                    <font color="#00d4ff"> TFDASH: A fairness, stability, and efficiency aware rate control approach for multiple clients over DASH </font> </a> <br>
                     <em>Chao Zhou, Chia-Wen Lin, Xinggong Zhang, Zongming Guo </em>
                     <strong>TCSVT, 2017</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.icst.pku.edu.cn/NetVideo/docs/20201104113815651719.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Dynamic threshold based rate adaptation for HTTP live streaming </font> </a> <br>
+                    <font color="#00d4ff"> Dynamic threshold based rate adaptation for HTTP live streaming </font> </a> <br>
                     <em>Lan Xie, Chao Zhou, Xinggong Zhang, Zongming Guo </em>
                     <strong>ISCAS, 2017</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.ee.nthu.edu.tw/cwlin/pub/jvci_p2p_2016.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> An unequal error protection scheme for reliable peer-to-peer scalable video streaming </font> </a> <br>
+                    <font color="#00d4ff"> An unequal error protection scheme for reliable peer-to-peer scalable video streaming </font> </a> <br>
                     <em>Chi-Wen Lo, Chao Zhou, Chia-Wen Lin, Yung-Chang Chen </em>
                         <strong>JVCIR, 2016</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.ee.nthu.edu.tw/cwlin/pub/tmm_dash_2016.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> mDASH: A Markov Decision-Based Rate Adaptation Approach for Dynamic HTTP Streaming </font> </a> <br>
+                    <font color="#00d4ff"> mDASH: A Markov Decision-Based Rate Adaptation Approach for Dynamic HTTP Streaming </font> </a> <br>
                     <em>Chao Zhou, Chia-Wen Lin, Zongming Guo</em>
                     <strong>TMM, 2016</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/7457843" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>A Markov decision based rate adaption approach for dynamic HTTP streaming </font> </a> <br>
+                    <font color="#00d4ff">A Markov decision based rate adaption approach for dynamic HTTP streaming </font> </a> <br>
                     <em> Chao Zhou, Chia-Wen Lin</em>
                     <strong>VCIP, 2015, <font color=Green>Best Paper</font></strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.icst.pku.edu.cn/NetVideo/docs/20201104114136109389.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Delay-constrained rate control for real-time video streaming over wireless networks </font> </a> <br>
+                    <font color="#00d4ff">Delay-constrained rate control for real-time video streaming over wireless networks </font> </a> <br>
                     <em>Yufeng Geng, Xinggong Zhang, Tong Niu, Chao Zhou, Zongming Guo</em>
                     <strong>VCIP, 2015</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.icst.pku.edu.cn/netvideo/docs/20201104114027802151.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> Unequal error protection for real-time video streaming using expanding window reed-solomon code </font> </a> <br>
+                    <font color="#00d4ff"> Unequal error protection for real-time video streaming using expanding window reed-solomon code </font> </a> <br>
                     <em>Yufeng Geng, Xinggong Zhang, Chao Zhou, Zongming Guo </em>
                     <strong>VCIP, 2015</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.icst.pku.edu.cn/netvideo/docs/20201104114111851243.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>A fairness-aware smooth rate adaptation approach for dynamic HTTP streaming </font> </a> <br>
+                    <font color="#00d4ff">A fairness-aware smooth rate adaptation approach for dynamic HTTP streaming </font> </a> <br>
                     <em>Li Liu, Chao Zhou, Xinggong Zhang, Zongming Guo </em>
                     <strong>ICIP, 2015</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.icst.pku.edu.cn/NetVideo/docs/20201104114500958687.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Probabilistic chunk scheduling approach in parallel multiple-server dash </font> </a> <br>
+                    <font color="#00d4ff">Probabilistic chunk scheduling approach in parallel multiple-server dash </font> </a> <br>
                     <em>Li Liu, Chao Zhou, Xinggong Zhang, Zongming Guo, Cheng Li </em>
                     <strong>VCIP, 2014</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.ee.nthu.edu.tw/cwlin/pub/tcsvt_mimo_2015.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>A novel JSCC scheme for UEP-based scalable video transmission over MIMO systems</font> </a> <br>
+                    <font color="#00d4ff">A novel JSCC scheme for UEP-based scalable video transmission over MIMO systems</font> </a> <br>
                     <em>Chao Zhou, Chia-Wen Lin, Xinggong Zhang, Zongming Guo </em>
                     <strong>TCSVT, 2014</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.icst.pku.edu.cn/netvideo/docs/20201104114422917562.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Joint multi-CDN and LT-coding for video transport over HTTP</font> </a> <br>
+                    <font color="#00d4ff">Joint multi-CDN and LT-coding for video transport over HTTP</font> </a> <br>
                     <em>Kai Tang, Chao Zhou, Xinggong Zhang, Zongming Guo</em>
                     <strong>ISCAS, 2014</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/6706335" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown> A control theory based rate adaption scheme for dash over multiple servers</font> </a> <br>
+                    <font color="#00d4ff"> A control theory based rate adaption scheme for dash over multiple servers</font> </a> <br>
                     <em>Chao Zhou, Xinggong Zhang, Zongming Guo </em>
                     <strong>VCIP, 2013</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.ee.nthu.edu.tw/cwlin/pub/tcsvt_dash_2013.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>A control-theoretic approach to rate adaption for DASH over multiple content distribution servers </font> </a> <br>
+                    <font color="#00d4ff">A control-theoretic approach to rate adaption for DASH over multiple content distribution servers </font> </a> <br>
                     <em>Chao Zhou, Chia-Wen Lin, Xinggong Zhang, Zongming Guo </em>
                     <strong>TSCVT, 2013</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="http://apsipa.org/proceedings_2013/papers/216_PID2945845.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Buffer-based smooth rate adaptation for dynamic HTTP streaming</font> </a> <br>
+                    <font color="#00d4ff">Buffer-based smooth rate adaptation for dynamic HTTP streaming</font> </a> <br>
                     <em>Chao Zhou, Chia-Wen Lin, Xinggong Zhang, Zongming Guo </em>
                     <strong>APSIPA, 2013</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.sciencedirect.com/science/article/pii/S1389128613002260" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Optimal adaptive channel scheduling for scalable video broadcasting over MIMO wireless networks </font> </a> <br>
+                    <font color="#00d4ff">Optimal adaptive channel scheduling for scalable video broadcasting over MIMO wireless networks </font> </a> <br>
                     <em>Chao Zhou, Xinggong Zhang, Zongming Guo</em>
                     <strong>Computer Networks, 2013</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://ieeexplore.ieee.org/abstract/document/6572056" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Adaptive channel scheduling for Scalable Video broadcasting over MIMO wireless networks</font> </a> <br>
+                    <font color="#00d4ff">Adaptive channel scheduling for Scalable Video broadcasting over MIMO wireless networks</font> </a> <br>
                     <em>Chao Zhou, Xinggong Zhang, Zongming Guo</em>
                     <strong>ISACS, 2013</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="#" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Optimization scheme for multi-user video transmission over MIMO multi-hop wireless networks </font> </a> <br>
+                    <font color="#00d4ff">Optimization scheme for multi-user video transmission over MIMO multi-hop wireless networks </font> </a> <br>
                     <em>Chao Zhou, Xing-Gong Zhang, Zong-Ming Guo </em>
                     <strong>Journal of Software, 2013</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.icst.pku.edu.cn/netvideo/docs/20201104115206518140.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>A control-theoretic approach to rate adaptation for dynamic HTTP streaming</font> </a> <br>
+                    <font color="#00d4ff">A control-theoretic approach to rate adaptation for dynamic HTTP streaming</font> </a> <br>
                     <em>Chao Zhou, Xinggong Zhang, Longshe Huo, Zongming Guo </em>
                     <strong>VCIP, 2012, <font color=Green>Best Student Paper</font></strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.wict.pku.edu.cn/NetVideo/docs/20201104115327346336.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Cross-entropy based antenna selection for scalable video streaming over MIMO wireless networks</font> </a> <br>
+                    <font color="#00d4ff">Cross-entropy based antenna selection for scalable video streaming over MIMO wireless networks</font> </a> <br>
                     <em>Chao Zhou, Xinggong Zhang, Zongming Guo </em>
                     <strong>ICIP, 2012</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.icst.pku.edu.cn/NetVideo/docs/20201104115247031217.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>A novel JSCC scheme for scalable video transmission over MIMO systems </font> </a> <br>
+                    <font color="#00d4ff">A novel JSCC scheme for scalable video transmission over MIMO systems </font> </a> <br>
                     <em> Xinggong Zhang, Chao Zhou, Zongming Guo </em>
                     <strong>ICIP, 2012</strong>
                 </div>
 
                 <div class="publication-item card">
                     <a href="https://www.icst.pku.edu.cn/NetVideo/docs/20201104115740295760.pdf" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
-                    <font color=Brown>Collision-detection based rate-adaptation for video multicasting over IEEE 802.11 wireless networks</font> </a> <br>
+                    <font color="#00d4ff">Collision-detection based rate-adaptation for video multicasting over IEEE 802.11 wireless networks</font> </a> <br>
                     <em>Chao Zhou, Xinggong Zhang, Lichuan Lu, Zongming Guo </em>
                         <strong>ICIP, 2010</strong>
                 </div>
@@ -527,19 +530,19 @@
                 <h2><i class="fas fa-trophy"></i> Awards</h2>
                 <div class="award-item">
                     <p>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>首都劳动奖章</font>, <em>2024 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>国家广电总局青年创新人才</font>, <em>国家广播电视总局, 2024 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>全国广播电视和网络视听行业青年创新人才</font>, <em>北京市广播电视局, 2023/11 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>全国广播电视和网络视听先进事迹报告会先进个人</font>, <em>国家广播电视总局, 2023/8 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>中国专利优秀奖</font>, <em>国家知识产权局, 2023/7 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>中关村科学城科技创新英才</font>, <em>中关村科学城总工会, 2023 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>第六届北京市发明专利奖三等奖</font>, <em>北京市人民政府, 2021/4 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>中国电子学会科学技术奖(技术发明)一等奖</font>, <em>中国电子学会, 2020/12 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">首都劳动奖章</font>, <em>2024 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">国家广电总局青年创新人才</font>, <em>国家广播电视总局, 2024 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">全国广播电视和网络视听行业青年创新人才</font>, <em>北京市广播电视局, 2023/11 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">全国广播电视和网络视听先进事迹报告会先进个人</font>, <em>国家广播电视总局, 2023/8 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">中国专利优秀奖</font>, <em>国家知识产权局, 2023/7 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">中关村科学城科技创新英才</font>, <em>中关村科学城总工会, 2023 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">第六届北京市发明专利奖三等奖</font>, <em>北京市人民政府, 2021/4 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">中国电子学会科学技术奖(技术发明)一等奖</font>, <em>中国电子学会, 2020/12 </em><br>
 
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>Best Paper</font>, <em>VCIP, 2015 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>Best Student Paper</font>, <em>VCIP, 2012 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>1st Prize</font>, <em>ACM MM Grand Challenge - Short Video Streaming Challenge, 2022 </em><br>
-                        <i class="fas fa-award award-icon"></i> <font color=Brown>1st Prize</font>, <em>ACM MM Grand Challenge - Meet Deadline Requirements, 2021 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">Best Paper</font>, <em>VCIP, 2015 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">Best Student Paper</font>, <em>VCIP, 2012 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">1st Prize</font>, <em>ACM MM Grand Challenge - Short Video Streaming Challenge, 2022 </em><br>
+                        <i class="fas fa-award award-icon"></i> <font color="#00d4ff">1st Prize</font>, <em>ACM MM Grand Challenge - Meet Deadline Requirements, 2021 </em><br>
                     </p>
             </section>
 
@@ -547,12 +550,12 @@
                 <h2><i class="fas fa-users"></i> Involvements</h2>
                 <div class="involvements-item">
                     <p>
-                        <i class="fas fa-network-wired involvements-icon"></i> <font color=Brown>中国计算机学会(CCF)多媒体专委会会员</font><br>
-                        <i class="fas fa-network-wired involvements-icon"></i> <font color=Brown>中国图像图形学会(CSIG)会员</font><br>
-                        <i class="fas fa-network-wired involvements-icon"></i> <font color=Brown>北京市青年科技人才协会(首届)会员</font><br>
-                        <i class="fas fa-network-wired involvements-icon"></i> <font color=Brown>北京市第十三届党代会代表</font><br>
-                        <i class="fas fa-network-wired involvements-icon"></i> <font color=Brown>项目负责人</font>, <em>广电中长期计划: 面向多渠道多终端的综合视听服务的通用音视频传输协议研究(2024AB0100) </em><br>
-                        <i class="fas fa-network-wired involvements-icon"></i> <font color=Brown>项目课题三负责人</font>,<em> 国家重点研发计划-多模态网络与通信专项: 基于多模态网络的超高清视频分发网络研究与验证(2024YFB2907203)</em> <br>
+                        <i class="fas fa-network-wired involvements-icon"></i> <font color="#00d4ff">中国计算机学会(CCF)多媒体专委会会员</font><br>
+                        <i class="fas fa-network-wired involvements-icon"></i> <font color="#00d4ff">中国图像图形学会(CSIG)会员</font><br>
+                        <i class="fas fa-network-wired involvements-icon"></i> <font color="#00d4ff">北京市青年科技人才协会(首届)会员</font><br>
+                        <i class="fas fa-network-wired involvements-icon"></i> <font color="#00d4ff">北京市第十三届党代会代表</font><br>
+                        <i class="fas fa-network-wired involvements-icon"></i> <font color="#00d4ff">项目负责人</font>, <em>广电中长期计划: 面向多渠道多终端的综合视听服务的通用音视频传输协议研究(2024AB0100) </em><br>
+                        <i class="fas fa-network-wired involvements-icon"></i> <font color="#00d4ff">项目课题三负责人</font>,<em> 国家重点研发计划-多模态网络与通信专项: 基于多模态网络的超高清视频分发网络研究与验证(2024YFB2907203)</em> <br>
 
                     </p>
             </section>
@@ -575,6 +578,44 @@
     -->
     
     <script>
+        // 创建粒子背景动画
+        function createParticles() {
+            const container = document.getElementById('particlesContainer');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // 随机大小
+                const size = Math.random() * 4 + 1;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // 随机位置
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                
+                // 随机动画延迟
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                
+                // 随机透明度
+                particle.style.opacity = Math.random() * 0.6 + 0.2;
+                
+                // 随机颜色（蓝色或粉色）
+                const colors = ['#00d4ff', '#ff0080', '#00ffff', '#ff6b9d'];
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                
+                container.appendChild(particle);
+            }
+        }
+        
+        // 页面加载完成后创建粒子
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+        });
+
         // 滚动进度指示器
         window.addEventListener('scroll', function() {
             const scrollProgress = document.getElementById('scrollProgress');
