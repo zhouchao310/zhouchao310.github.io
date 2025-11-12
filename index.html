@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZhouChao-Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- 滚动进度指示器 -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+    
     <div class="container">
         <aside class="sidebar">
             <div class="profile">
@@ -565,5 +573,132 @@
         <p>&copy; 2025 [姓名]. 保留所有权利. 网页设计灵感来源于互联网并由AI助手协助完成。</p>
     </footer>
     -->
+    
+    <script>
+        // 滚动进度指示器
+        window.addEventListener('scroll', function() {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // 导航状态管理
+        let isScrollingToTarget = false;
+        let scrollTimeout = null;
+        let ticking = false;
+        
+        // 平滑滚动到锚点 - 修复多重高亮问题
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                
+                if (target) {
+                    // 设置滚动标志，防止滚动事件干扰
+                    isScrollingToTarget = true;
+                    
+                    // 立即更新导航状态
+                    document.querySelectorAll('.navigation a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // 计算目标位置，考虑固定头部的偏移
+                    const targetPosition = target.offsetTop - 80;
+                    
+                    // 使用更流畅的滚动
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 清除之前的超时
+                    if (scrollTimeout) {
+                        clearTimeout(scrollTimeout);
+                    }
+                    
+                    // 滚动完成后重新启用自动高亮
+                    scrollTimeout = setTimeout(() => {
+                        isScrollingToTarget = false;
+                    }, 1000); // 给滚动动画足够的时间
+                }
+            });
+        });
+
+        // 添加导航高亮效果 - 修复冲突问题
+        function updateNavigation() {
+            // 如果正在执行点击滚动，跳过自动更新
+            if (isScrollingToTarget) {
+                ticking = false;
+                return;
+            }
+            
+            const sections = document.querySelectorAll('.content-section');
+            const navLinks = document.querySelectorAll('.navigation a');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            let current = '';
+            let maxVisibleArea = 0;
+            
+            // 找到可见面积最大的section
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                const viewportTop = scrollTop;
+                const viewportBottom = scrollTop + window.innerHeight;
+                
+                // 计算section在视口中的可见面积
+                const visibleTop = Math.max(sectionTop, viewportTop);
+                const visibleBottom = Math.min(sectionBottom, viewportBottom);
+                const visibleArea = Math.max(0, visibleBottom - visibleTop);
+                
+                if (visibleArea > maxVisibleArea) {
+                    maxVisibleArea = visibleArea;
+                    current = section.getAttribute('id');
+                }
+            });
+
+            // 如果没有匹配的section，默认选择第一个
+            if (!current && sections.length > 0) {
+                current = sections[0].getAttribute('id');
+            }
+
+            // 更新导航状态
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+            
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateNavigation);
+                ticking = true;
+            }
+        });
+
+        // 初始化导航状态
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(updateNavigation, 100); // 延迟一点确保页面完全加载
+        });
+
+        // 添加页面加载动画
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
 </body>
 </html>
