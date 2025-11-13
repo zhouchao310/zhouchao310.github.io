@@ -278,23 +278,44 @@ body::before {
     transform: translateX(6px) scale(0.98);
 }
 
-.navigation ul li a.active {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(255, 0, 128, 0.2) 100%);
-    color: #00d4ff;
+.navigation ul li a.active,
+.navigation ul li a[data-active="true"] {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(255, 0, 128, 0.2) 100%) !important;
+    color: #00d4ff !important;
     box-shadow: 
         0 5px 15px rgba(0, 212, 255, 0.4),
-        0 0 25px rgba(0, 212, 255, 0.3);
-    transform: translateX(8px);
-    border-color: rgba(0, 212, 255, 0.5);
-    text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
+        0 0 25px rgba(0, 212, 255, 0.3) !important;
+    transform: translateX(8px) !important;
+    border-color: rgba(0, 212, 255, 0.5) !important;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.7) !important;
 }
 
-.navigation ul li a.active::before {
-    left: 0;
+.navigation ul li a.active::before,
+.navigation ul li a[data-active="true"]::before {
+    left: 0 !important;
 }
 
-.navigation ul li a.active::after {
-    opacity: 0.15;
+.navigation ul li a.active::after,
+.navigation ul li a[data-active="true"]::after {
+    opacity: 0.15 !important;
+}
+
+/* 强制清除非active状态的样式 */
+.navigation ul li a:not(.active):not([data-active="true"]) {
+    background: transparent !important;
+    color: #cbd5e0 !important;
+    box-shadow: none !important;
+    transform: translateX(0) !important;
+    border-color: transparent !important;
+    text-shadow: none !important;
+}
+
+.navigation ul li a:not(.active):not([data-active="true"])::before {
+    left: -100% !important;
+}
+
+.navigation ul li a:not(.active):not([data-active="true"])::after {
+    opacity: 0 !important;
 }
 
 /* 主要内容区域样式 */
