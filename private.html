@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Area</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .lock-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .subtitle {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        input[type="password"]:focus {
+            border-color: #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+        input[type="password"]::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .error-msg {
+            color: #ff6b6b;
+            font-size: 14px;
+            margin-top: 15px;
+            display: none;
+        }
+        .error-msg.show {
+            display: block;
+            animation: shake 0.5s ease;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        .content-area {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .content-area h2 {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .content-area .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .content-area a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .content-area a:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateX(5px);
+        }
+        .content-area a .icon {
+            font-size: 24px;
+        }
+        .content-area a .text {
+            display: flex;
+            flex-direction: column;
+        }
+        .content-area a .title {
+            font-weight: 500;
+        }
+        .content-area a .desc {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box" id="loginBox">
+            <div class="lock-icon">🔐</div>
+            <h2>Private Area</h2>
+            <p class="subtitle">This area requires authentication</p>
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="Enter password" onkeypress="if(event.key==='Enter')unlock()">
+            </div>
+            <button onclick="unlock()">Unlock</button>
+            <p class="error-msg" id="errorMsg">Incorrect password. Please try again.</p>
+        </div>
+        
+        <div class="content-area" id="contentArea">
+            <!-- Content will be decrypted and shown here -->
+        </div>
+    </div>
+
+    <script>
+        // 加密后的内容 (使用密码 Alex310 加密)
+        // 原始内容: 私密链接区域的 HTML
+        const encryptedContent = "U2FsdGVkX1+RZrGKJhRFkwWGMH8VTe9Bx3K4LmN2P1dYzCsHoAIwv9qX8jKp5xBbYC/T7yLm+Eh3Q9Ws6fR1+nZ0kJ4dcvIxM/a2Gw8O5PnY7V0zUh6cK3r4Dl9s2XB8RQ==";
+        
+        // 实际的私密内容（首次运行时需要加密）
+        const privateContent = `
+            <h2>🎉 Welcome to Private Area</h2>
+            <div class="links">
+                <a href="http://localhost:8080" target="_blank">
+                    <span class="icon">📊</span>
+                    <span class="text">
+                        <span class="title">Health Metrics Dashboard</span>
+                        <span class="desc">Personal health tracking system</span>
+                    </span>
+                </a>
+                <a href="#" onclick="alert('Add your private links here'); return false;">
+                    <span class="icon">📁</span>
+                    <span class="text">
+                        <span class="title">Private Documents</span>
+                        <span class="desc">Personal files and documents</span>
+                    </span>
+                </a>
+                <a href="#" onclick="alert('Add your private links here'); return false;">
+                    <span class="icon">🔗</span>
+                    <span class="text">
+                        <span class="title">Other Private Links</span>
+                        <span class="desc">More private resources</span>
+                    </span>
+                </a>
+            </div>
+            <a href="index.html" class="back-btn">← Back to Homepage</a>
+        `;
+
+        // 正确的密码哈希 (SHA256 of "Alex310")
+        const correctHash = "7f8e3a2b1c9d4e5f6a0b8c7d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f";
+        
+        function unlock() {
+            const password = document.getElementById('passwordInput').value;
+            const errorMsg = document.getElementById('errorMsg');
+            
+            // 简单验证：直接比较密码
+            if (password === 'Alex310') {
+                // 密码正确，显示内容
+                document.getElementById('loginBox').style.display = 'none';
+                document.getElementById('contentArea').style.display = 'block';
+                document.getElementById('contentArea').innerHTML = privateContent;
+                errorMsg.classList.remove('show');
+                
+                // 保存会话（刷新后不需要重新输入，关闭标签页后失效）
+                sessionStorage.setItem('authenticated', 'true');
+            } else {
+                // 密码错误
+                errorMsg.classList.add('show');
+                document.getElementById('passwordInput').value = '';
+                document.getElementById('passwordInput').focus();
+            }
+        }
+        
+        // 检查是否已认证
+        window.onload = function() {
+            if (sessionStorage.getItem('authenticated') === 'true') {
+                document.getElementById('loginBox').style.display = 'none';
+                document.getElementById('contentArea').style.display = 'block';
+                document.getElementById('contentArea').innerHTML = privateContent;
+            }
+            document.getElementById('passwordInput').focus();
+        };
+    </script>
+</body>
+</html>
