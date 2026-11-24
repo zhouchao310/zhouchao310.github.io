@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="publication-stats.css">
+    <script src="publication-stats.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -64,9 +66,66 @@
                 </div>
             </section>
             <section id="publications" class="content-section card-section">
-                <h2><i class="fas fa-book-open"></i> Recent Publications</h2>
+                <div class="publications-header">
+                    <h2><i class="fas fa-book-open"></i> Recent Publications</h2>
+                    <div class="publication-stats" id="publicationStats" role="group" aria-label="Publication statistics" hidden>
+                        <div class="publication-total">
+                            <span class="publication-total-count" id="publicationTotal"></span>
+                            <span class="publication-total-label">Total papers</span>
+                            <span class="publication-year-range" id="publicationYearRange"></span>
+                        </div>
+                        <figure class="publication-timeline">
+                            <figcaption>Publications by year <span>Listed on this site</span></figcaption>
+                            <div class="publication-chart-scroll" tabindex="0" role="region" aria-label="Annual publication counts; scroll horizontally on small screens">
+                                <ol class="publication-bars" id="publicationBars" aria-label="Number of papers per year"></ol>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
                 
                 <i class="fas fa-calendar-days"></i> <strong> <font color="#00d4ff"> 2026 </font></strong>
+                <div class="publication-item card">
+                    <i class="fas fa-file-alt"></i>
+                    <font color="#00d4ff"> Arbitrary-Scale Reference Picture Resampling for Versatile Video Coding </font> <br>
+                    <em>Junying Su, Wenzhuo Zhang, Nianxiang Fu, Daiqin Yang, Zhenan Lin, Chao Zhou </em>
+                    <strong>VCIP, 2026</strong>
+                </div>
+
+                <div class="publication-item card">
+                    <i class="fas fa-file-alt"></i>
+                    <font color="#00d4ff"> Adaptive Bilateral Motion Vector Refinement for Future Video Coding </font> <br>
+                    <em>Yunrui Jian, Zhenan Lin, Yue Huang, Weilun Feng, Xueli Cheng, Chao Zhou </em>
+                    <strong>ICME, 2026, <font color=Green>Best Paper Candidate</font></strong>
+                </div>
+
+                <div class="publication-item card">
+                    <a href="https://ieeexplore.ieee.org/document/11630207" target="_blank"> <i class="fas fa-file-alt"></i> </a>
+                    <font color="#00d4ff"> Improving Reference Picture Resampling for VVC With Scale and Upsampling Guided Downsampling </font> <br>
+                    <em>Junying Su, Wenzhuo Zhang, Nianxiang Fu, Daiqin Yang, Zhenan Lin, Chao Zhou </em>
+                    <strong>ICIP, 2026</strong>
+                </div>
+
+                <div class="publication-item card">
+                    <a href="https://ieeexplore.ieee.org/document/11629887" target="_blank"> <i class="fas fa-file-alt"></i> </a>
+                    <font color="#00d4ff"> Quality-Smoothing Rate Control for Learned Video Transcoding via Rate-Quality Prediction </font> <br>
+                    <em>Nianxiang Fu, Daiqin Yang, Zhenan Lin, Chao Zhou </em>
+                    <strong>ICIP, 2026</strong>
+                </div>
+
+                <div class="publication-item card">
+                    <a href="https://dl.acm.org/doi/10.1145/3820890" target="_blank"> <i class="fas fa-file-alt"></i> </a>
+                    <font color="#00d4ff"> LVT: A Learned Video Transcoding Framework </font> <br>
+                    <em>Nianxiang Fu, Daiqin Yang, Zhenan Lin, Chao Zhou </em>
+                    <strong>ACM TOMM, 2026</strong>
+                </div>
+
+                <div class="publication-item card">
+                    <a href="https://ieeexplore.ieee.org/document/11510448" target="_blank"> <i class="fas fa-file-alt"></i> </a>
+                    <font color="#00d4ff"> MG-VLQA: Multi-Granularity Quality Assessment for Image Compression via Visual Language Models </font> <br>
+                    <em>Hanfei Li, Anle Ke, Jiawen Gu, Chao Zhou, Tong Chen, Zhan Ma </em>
+                    <strong>DCC, 2026</strong>
+                </div>
+
                 <div class="publication-item card">
                     <a href="https://arxiv.org/abs/2603.00906" target="_blank"> <i class="fas fa-file-alt"></i> </a> 
                     <font color="#00d4ff"> ShiftLUT: Spatial Shift Enhanced Look-Up Tables for Efficient Image Restoration </font> </a> <br>
