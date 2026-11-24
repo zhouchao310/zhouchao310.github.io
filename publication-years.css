@@ -1,0 +1,122 @@
+.publication-year-controls {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.publication-year-controls button {
+    padding: 8px 14px;
+    min-height: 44px;
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    border-radius: 8px;
+    background: rgba(0, 212, 255, 0.04);
+    color: #cbd5e0;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.publication-year-controls button:hover {
+    color: #00d4ff;
+    border-color: #00d4ff;
+}
+
+.publication-year {
+    margin-bottom: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 12px;
+}
+
+.publication-year > summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    min-height: 56px;
+    list-style: none;
+    cursor: pointer;
+    color: #00d4ff;
+    border-radius: 12px;
+    background: rgba(0, 212, 255, 0.03);
+}
+
+.publication-year > summary::-webkit-details-marker {
+    display: none;
+}
+
+.publication-year > summary:hover {
+    background: rgba(0, 212, 255, 0.08);
+}
+
+.publication-year > summary:focus-visible,
+.publication-year-controls button:focus-visible {
+    outline: 2px solid #00d4ff;
+    outline-offset: 3px;
+}
+
+.publication-year > summary > i {
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+.publication-year-label {
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.publication-year-count {
+    padding: 2px 9px;
+    border-radius: 20px;
+    background: rgba(0, 212, 255, 0.08);
+    color: #a0aec0;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.publication-year-chevron {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.publication-year[open] > summary .publication-year-chevron {
+    transform: rotate(45deg);
+}
+
+.publication-year-papers {
+    padding: 16px 16px 0;
+}
+
+.publication-year-papers .publication-item:last-child {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 480px) {
+    .publication-year > summary {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .publication-year-papers {
+        padding: 12px 8px 0;
+    }
+}
+
+@media print {
+    .publication-year-controls,
+    .publication-year-chevron {
+        display: none;
+    }
+
+    .publication-year::details-content {
+        content-visibility: visible;
+        display: block;
+    }
+}

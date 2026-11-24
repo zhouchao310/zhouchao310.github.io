@@ -36,6 +36,23 @@
                 const year = bar.querySelector('.publication-bar-year').textContent;
                 assert(Number(bar.querySelector('.publication-bar-count').textContent) === (counts[year] || 0), `Wrong count for ${year}`);
             }
+            const groups = [...d.querySelectorAll('.publication-year')];
+            assert(groups.length === Object.keys(counts).length, 'Year group count mismatch');
+            assert(groups.filter(group => group.open).length === 1 && groups[0].open, 'Only latest year should start open');
+            assert(groups.every(group => group.querySelectorAll('.publication-item').length === counts[group.dataset.year]), 'Papers assigned to wrong year');
+            const originalCards = cards.map(card => card.outerHTML);
+            const originalChart = d.getElementById('publicationBars').innerHTML;
+            d.querySelector('[data-action="expand"]').click();
+            assert(groups.every(group => group.open), 'Expand all failed');
+            assert(cards.every(card => card.getClientRects().length > 0), 'Expanded paper is hidden');
+            d.querySelector('[data-action="collapse"]').click();
+            assert(groups.every(group => !group.open), 'Collapse all failed');
+            groups[groups.length - 1].querySelector('summary').click();
+            assert(groups[groups.length - 1].open && !groups[0].open, 'Individual year toggle failed');
+            assert(cards.every((card, index) => card.outerHTML === originalCards[index]), 'Toggling changed publication content');
+            assert(d.getElementById('publicationBars').innerHTML === originalChart && Number(d.getElementById('publicationTotal').textContent) === cards.length, 'Toggling changed statistics');
+            groups[groups.length - 1].open = false;
+            groups[0].open = true;
             assert(d.documentElement.scrollWidth <= width + 1, `Page overflow at ${width}`);
             assert(width > 768 || frame.contentWindow.getComputedStyle(d.querySelector('.container')).flexDirection === 'column', 'Mobile sidebar and content are still side by side');
             const h = d.querySelector('.publications-header h2').getBoundingClientRect();
